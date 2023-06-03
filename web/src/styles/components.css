@@ -1,0 +1,38 @@
+.content-container {
+  @apply mx-auto px-6 2xl:px-20;
+}
+
+.section-container {
+  @apply mx-auto max-w-[1440px] px-6 md:px-0 md:w-11/12;
+}
+
+.input {
+  @apply h-12 w-full bg-white rounded-md indent-4;
+}
+
+.secondaryBtn {
+  @apply w-full h-12  rounded-lg text-primaryRed font-bold border-2 border-primaryRed;
+}
+
+.sellingSectionCard {
+  @apply rounded-tl-[32px] rounded-tr-[8px] rounded-bl-[8px] rounded-br-[32px] overflow-hidden aspect-square;
+}
+
+.aside-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 535px solid #282828;
+  border-right: 94.5px solid transparent;
+  filter: drop-shadow(4px 0 10px rgba(0, 0, 0, 0.4));
+  transition: all;
+  transition-duration: 1000ms;
+}
+
+@media (max-width: 1024px) {
+  .aside-footer {
+    border-bottom: 535px solid #282828;
+    border-right: 0 solid transparent;
+    width: 100%;
+  }
+}

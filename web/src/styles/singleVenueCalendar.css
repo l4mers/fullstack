@@ -1,0 +1,17 @@
+.react-calendar {
+    border: none;
+    width: auto;
+}
+
+.rangeHighlight {
+    background-color: #0091ae;
+    color: white; /* you might want to change the text color to ensure it's visible on the background */
+  }
+
+  .react-calendar__tile {
+    padding: 24px 10px;
+  }
+
+  .react-calendar__tile:disabled {
+    background-color: #EB737A;
+  }

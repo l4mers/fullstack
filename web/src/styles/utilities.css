@@ -1,0 +1,65 @@
+.custom-transition {
+  transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.4s;
+}
+
+.gradient-opacity {
+  background-image: linear-gradient(
+    to right,
+    rgba(248, 244, 242, 1) 0,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 85%,
+    rgba(248, 244, 242, 1) 100%
+  );
+}
+
+.input-shadow {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+
+.buttonCTAeffect {
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  content: '';
+}
+
+.gradient-divider {
+  background-image: linear-gradient(
+    to right,
+    rgba(235, 115, 122, 1) 0,
+    rgba(248, 244, 242, 0) 100%
+  );
+}
+
+.gradientbg {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.35) 10%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.35) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.inactiveShadowBtn {
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.25s ease;
+}
+
+.dashboardBtnGradient {
+  background: linear-gradient(180deg, #FD7E40 0%, #FD7E40 0.01%, #EB737A 100%);
+}
+
+.inactiveShadowBtn:hover {
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) {
+  .gradientbg {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}

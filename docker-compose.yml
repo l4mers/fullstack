@@ -1,0 +1,32 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      - DB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+
+  holidays:
+    build:
+      context: ./holidays
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+
+  web-service:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+     - "8080:8080"
+    environment:
+      - VITE_GOOGLE_MAPS_API=${VITE_GOOGLE_MAPS_API}
+
+
