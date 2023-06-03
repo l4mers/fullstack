@@ -1,4 +1,4 @@
-package com.restservice.holidays.test;
+package com.restservice.holidays.models.venue;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,14 +9,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Message {
+@Builder
+public class Amenity {
     @Id
     @GeneratedValue
     private Long id;
-
-    private String message;
+    private String amenity;
 }
