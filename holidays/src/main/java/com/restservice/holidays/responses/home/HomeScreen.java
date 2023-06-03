@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -15,9 +14,9 @@ import java.util.List;
 @NoArgsConstructor
 public class HomeScreen {
 
-    private List<TrendingVenue> trendingVenues = new ArrayList<>();
-    private List<AffordableVenue> affordableVenues = new ArrayList<>();
-    private List<TrendingCountries> trendingCountries = new ArrayList<>();
+    private List<TrendingVenue> trendingVenues;
+    private List<AffordableVenue> affordableVenues;
+    private List<TrendingCountries> trendingCountries;
 
 
     public void trendingVenue(Venue venue){
