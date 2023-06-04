@@ -5,7 +5,7 @@ const reusableAxiosComponent = (data, endpoint, request) => {
     try {
       const response = await axios({
         method: request,
-        url: `http://fullstack-holidays-1:8081/get/user/${endpoint}`,
+        url: `http://localhost:8081/get/user/${endpoint}`,
         data: data,
       });
       console.log("Response data from User post", response.data);
