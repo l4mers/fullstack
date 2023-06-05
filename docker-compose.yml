@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    image: mariadb
+    image: ghcr.io/l4mers/mariadb
     ports:
       - "3306:3306"
     environment:
@@ -11,23 +11,17 @@ services:
       - ./sql:/docker-entrypoint-initdb.d
 
   holidays:
+    image: ghcr.io/l4mers/api
     build:
       context: ./holidays
       dockerfile: Dockerfile
     ports:
-      - "8081:8080"
+      - "8080:8080"
     environment:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
 
-  web-service:
-    build:
-      context: ./web
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
-    environment:
-      - VITE_GOOGLE_MAPS_API=${VITE_GOOGLE_MAPS_API}
+
 
 
 
